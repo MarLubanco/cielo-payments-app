@@ -11,14 +11,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
+      <tr *ngFor="let pay of payments" > 
         <th scope="row"></th>
-        <td>{{dataLanc}}</td>
-        <td>{{descricao}}</td>
-        <td>{{numero}}</td>
-        <td>{{dataConfirma}}</td>
-        <td>{{dadosBancarios}}</td>
-        <td>R$ {{valorFinal}}</td>
+        <td>{{pay.dataLancamentoContaCorrenteCliente}}</td>
+        <td>{{pay.descricaoGrupoPagamento}}</td>
+        <td>{{pay.numeroRaizCNPJ}}</td>
+        <td>{{pay.dataEfetivaLancamento}}</td>
+        <td>{{pay.codigoIdentificadorUnico}}</td>
+        <td>R$ {{pay.valorLancamentoRemessa}}</td>
       </tr>
      
     </tbody>

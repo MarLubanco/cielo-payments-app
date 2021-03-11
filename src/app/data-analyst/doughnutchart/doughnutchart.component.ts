@@ -19,10 +19,7 @@ export class DoughnutchartComponent implements OnInit {
   @Input() type: string = ""
   canvas: any;
   ctx: any;
-  dashboard: any = {}
-  payments: any[] = []
   labels: any = ["Pagas", "Pendentes"]
-  countBanks: number = 0
   values: any = []
   colors: any = [ 'rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)',"green", "grey", "red", "yellow"]
 
@@ -32,10 +29,6 @@ export class DoughnutchartComponent implements OnInit {
   ngOnInit(): void {
     this.tableService.getDashboard()
     .subscribe(dashboard => {
-      this.dashboard = dashboard.percentPayment
-      this.payments = dashboard.percentPayment.controleLancamentoList
-      this.countBanks= 0
-      this.values = []
       const {paymentsPaid, totalPayments} = dashboard.percentPayment;
       this.values.push(paymentsPaid)
       this.values.push(totalPayments - paymentsPaid)

@@ -19,8 +19,6 @@ export class BarchartComponent implements OnInit{
   @Input() type: string = ""
   canvas: any;
   ctx: any;
-  dashboard: any = {}
-  payments: any[] = []
   banks: any = []
   countBanks: number = 0
   values: any = []
@@ -32,8 +30,6 @@ export class BarchartComponent implements OnInit{
   ngOnInit(): void {
     this.tableService.getDashboard()
     .subscribe(dashboard => {
-      this.dashboard = dashboard.percentPayment
-      this.payments = dashboard.percentPayment.controleLancamentoList
       this.banks = []
       this.countBanks= 0
       this.values = []
@@ -43,8 +39,6 @@ export class BarchartComponent implements OnInit{
         this.countBanks++;
       }); 
      this.colors = this.colors.slice(0, this.countBanks)
-     console.log("shit")
-    console.log(this.colors)
     
      this.canvas = document.getElementById('myChart');
      this.ctx = this.canvas.getContext('2d');

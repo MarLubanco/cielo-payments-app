@@ -1,19 +1,25 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, OnInit } from "@angular/core";
+import { TableService } from "./table.service";
 
 @Component({
     selector: 'cielo-table',
     templateUrl: 'table.component.html'
 })
-export class TableComponent {
+export class TableComponent implements OnInit{
 
-    @Input() payments = []
+    payments = []
 
-    @Input() dataLanc = ""
-    @Input() descricao = ""
-    @Input() numero = ""
-    @Input() dataConfirma = ""
-    @Input() dadosBancarios = ""
-    @Input() valorFinal = ""
+    constructor(private tableService: TableService) {
+    }
+    
+    ngOnInit(): void {
+        this.tableService.getDashboard()
+        .subscribe(dashboard => {
+          this.payments = dashboard.percentPayment.controleLancamentoList
+        })
 
+        console.log(this.payments)
+        
+    }
     
 }
