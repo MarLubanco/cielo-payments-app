@@ -11,7 +11,13 @@ import { TableService } from '../table/table.service';
 export class DoughnutchartComponent implements OnInit {
 
   barChartOptions = {
-    scaleShowVerticalLines: false,
+    title: {
+      display: true,
+      text: 'Transações realizadas por todos os bancos'
+    },
+    legend: { display: false },
+
+    scaleShowVerticalLines: false,  
     responsive: true
   };
 
@@ -19,8 +25,8 @@ export class DoughnutchartComponent implements OnInit {
   @Input() type: string = ""
   canvas: any;
   ctx: any;
-  labels: any = ["Pagas", "Pendentes"]
-  values: any = []
+  labels: any = ["","Pagas", "Pendentes"]
+  values: any = [0]
   colors: any = [ 'rgba(255, 99, 132, 1)','rgba(54, 162, 235, 1)','rgba(255, 206, 86, 1)',"green", "grey", "red", "yellow"]
 
   constructor(private tableService: TableService) {

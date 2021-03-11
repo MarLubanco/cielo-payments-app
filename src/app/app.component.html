@@ -1,7 +1,8 @@
-<cielo-logo  style="margin-left: 35%;" url="https://fitgestao.com.br/wp-content/uploads/2018/01/logo-cielo-1024x683.png"></cielo-logo>
+<div style="background-color: rgb(46, 44, 44);">
+<cielo-logo  style="margin-left: 36%;" url="https://fitgestao.com.br/wp-content/uploads/2018/01/logo-cielo-1024x683.png"></cielo-logo>
 
-<h1 style="margin-left: 35%;" >{{title}}</h1>
-<h3 style="margin-left: 38%;">{{descriptions}}</h3>
+<h1 style="margin-left: 35%; font-weight: bold; color: white;" >{{title}}</h1>
+<h3 style="margin-left: 38%; color: white;">{{descriptions}}</h3>
 
 <div class="row">
   <div style="margin-left: 6%; margin-top: 5%;" class="col-xl-5 col-lg-5">
@@ -10,7 +11,7 @@
         </div>
         <div class="card-body">
             <div class="chart-pie pt-4 pb-2"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                <cielo-doughnutchart  style="display: block; width: 400px; height: 500px;" class="chartjs-render-monitor" label="Transações Pagas" type="bar"></cielo-doughnutchart>
+                <cielo-doughnutchart  style="margin-left: 10%;display: block; width: 400px; height: 500px;" class="chartjs-render-monitor" label="Transações Pagas" type="bar"></cielo-doughnutchart>
             </div>
         </div>
     </div>
@@ -22,16 +23,16 @@
           </div>
           <div class="card-body">
               <div class="chart-pie pt-4 pb-2"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
-                 <cielo-barchart  style="display: block; width: 400px; height: 500px;" class="chartjs-render-monitor" label="Transações por Banco" type="pie" ></cielo-barchart>
+                 <cielo-barchart  style="margin-left: 10%;display: block; width: 400px; height: 500px;" class="chartjs-render-monitor" label="Transações por Banco" type="pie" ></cielo-barchart>
               </div>
           </div>
       </div>
   </div>
 </div>
 
-<div class="card shadow mb-4">
+<div style="margin-left: 6%;width: 90%;" class="card shadow mb-4">
   <div class="card-header py-3">
-      <h6 class="m-0 font-weight-bold text-primary">Lista de Pagamentos</h6>
+      <h6 class="m-0 font-weight-bold text-primary">Lista de Pagamentos - PAGOS</h6>
   </div>
   <div class="card-body">
     <cielo-table></cielo-table>
@@ -39,3 +40,4 @@
 </div>
 
 
+</div>
