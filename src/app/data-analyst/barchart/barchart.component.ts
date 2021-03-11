@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
-import { ChartColor } from 'chart.js';
 import { TableService } from '../table/table.service';
 
 @Component({

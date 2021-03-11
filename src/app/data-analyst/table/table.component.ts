@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { TableService } from "./table.service";
 
 @Component({
@@ -17,9 +17,6 @@ export class TableComponent implements OnInit{
         .subscribe(dashboard => {
           this.payments = dashboard.percentPayment.controleLancamentoList
         })
-
-        console.log(this.payments)
-        
     }
     
 }
