@@ -13,12 +13,12 @@
     <tbody>
       <tr *ngFor="let pay of payments" > 
         <th scope="row"></th>
-        <td>{{pay.dataLancamentoContaCorrenteCliente}}</td>
-        <td>{{pay.descricaoGrupoPagamento}}</td>
-        <td>{{pay.numeroRaizCNPJ}}</td>
-        <td>{{pay.dataEfetivaLancamento}}</td>
-        <td>{{pay.codigoIdentificadorUnico}}</td>
-        <td>R$ {{pay.valorLancamentoRemessa}}</td>
+        <td *ngIf="pay.dataLancamentoContaCorrenteCliente">{{pay.dataLancamentoContaCorrenteCliente}}</td>
+        <td *ngIf="pay.descricaoGrupoPagamento">{{pay.descricaoGrupoPagamento}}</td>
+        <td *ngIf="pay.numeroRaizCNPJ">{{pay.numeroRaizCNPJ}}</td>
+        <td *ngIf="pay.dataEfetivaLancamento">{{pay.dataEfetivaLancamento}}</td>
+        <td *ngIf="pay.codigoIdentificadorUnico">{{pay.codigoIdentificadorUnico}}</td>
+        <td *ngIf="pay.valorLancamentoRemessa">R$ {{pay.valorLancamentoRemessa}}</td>
       </tr>
      
     </tbody>

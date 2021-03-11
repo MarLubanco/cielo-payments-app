@@ -7,7 +7,7 @@ import { TableService } from "./table.service";
 })
 export class TableComponent implements OnInit{
 
-    payments = []
+    payments: any[] = []
 
     constructor(private tableService: TableService) {
     }
@@ -16,6 +16,7 @@ export class TableComponent implements OnInit{
         this.tableService.getDashboard()
         .subscribe(dashboard => {
           this.payments = dashboard.percentPayment.controleLancamentoList
+          console.log(this.payments)
         })
     }
     

@@ -9,6 +9,6 @@ export class TableService {
     constructor(private http: HttpClient) {}
 
     getDashboard() {
-      return this.http.get<any>(API + "/lancamentos/porcentagem-pagos");
+      return this.http.get<any>(API + "/payments/dashboard");
     }
 }
