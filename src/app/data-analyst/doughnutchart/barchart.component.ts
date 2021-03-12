@@ -4,11 +4,11 @@ import * as Chart from 'chart.js';
 import { TableService } from '../table/table.service';
 
 @Component({
-  selector: 'cielo-doughnutchart',
-  templateUrl: './doughnutchart.component.html',
-  styleUrls: ['./doughnutchart.component.css']
+  selector: 'cielo-barchart',
+  templateUrl: './barchart.component.html',
+  styleUrls: ['./barchart.component.css']
 })
-export class DoughnutchartComponent implements OnInit {
+export class BarchartComponent implements OnInit {
 
   barChartOptions = {
     title: {

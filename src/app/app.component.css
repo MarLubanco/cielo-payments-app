@@ -1,3 +1,35 @@
-/* :host {
+.img-background {
+    background-color: rgb(46, 44, 44);
+}
 
-} */
+.img-center {
+    margin-left: 36%;
+}
+
+.title {
+    margin-left: 35%;
+     font-weight: bold;
+      color: white;
+}
+
+.subtitle {
+    margin-left: 38%;
+    color: white;
+}
+
+.card-center {
+    margin-left: 6%;
+     margin-top: 5%;
+}
+
+.component-chart {
+    margin-left: 10%;
+    display: block;
+     width: 400px;
+      height: 500px;
+}
+
+.table-center {
+    margin-left: 6%;
+    width: 90%;
+}

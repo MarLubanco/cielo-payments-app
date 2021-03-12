@@ -3,11 +3,11 @@ import * as Chart from 'chart.js';
 import { TableService } from '../table/table.service';
 
 @Component({
-  selector: 'cielo-barchart',
-  templateUrl: './barchart.component.html',
-  styleUrls: ['./barchart.component.css']
+  selector: 'cielo-piechart',
+  templateUrl: './piechart.component.html',
+  styleUrls: ['./piechart.component.css']
 })
-export class BarchartComponent implements OnInit{
+export class PiechartComponent implements OnInit{
   
   barChartOptions = {
     scaleShowVerticalLines: false,
